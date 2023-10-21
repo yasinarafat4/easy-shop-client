@@ -54,20 +54,20 @@ const Navbar = () => {
           isNavbarVisible ? "lg:translate-y-0" : "lg:translate-y-0"
         }`}
       >
-        <div className="flex justify-between items-center px-3 py-2 md:px-8 md:py-4 bg-slate-600 dark:bg-slate-700">
+        <div className="flex justify-between items-center px-3 py-2 md:px-8 md:py-4 bg-indigo-800 dark:bg-slate-800">
           <Link to="/">
             <h1 className="text-3xl font-bold text-white">Easy <span className="text-orange-500">Shop</span></h1>
           </Link>
           <div
-            className={`absolute lg:static bg-slate-600 dark:bg-slate-700 dark:text-white min-h-[60vh] lg:min-h-fit left-0 ${
-              isMenuOpen ? "top-[14%] md:top-[22%]" : "top-[-100%]"
+            className={`absolute lg:static bg-indigo-800 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent dark:text-white min-h-[60vh] lg:min-h-fit left-0 ${
+              isMenuOpen ? "top-[12%] md:top-[16%]" : "top-[-100%]"
             } w-full lg:w-auto flex items-center py-4 px-5 duration-700 z-10`}
           >
             <div className="flex lg:flex-row flex-col lg:items-center gap-[3vw] lg:gap-[2vw] xl:gap-[3vw] text-lg">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-white"
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
@@ -77,7 +77,7 @@ const Navbar = () => {
               <NavLink
                 to="/productOverview"
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-white"
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
@@ -87,7 +87,7 @@ const Navbar = () => {
               <NavLink
                 to="/addToCart"
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-white"
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
@@ -97,7 +97,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-white"
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
@@ -107,7 +107,7 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-white"
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
@@ -136,22 +136,24 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+
+            {/* Login button */}
             <Link to="/login">
               <button className="bg-orange-500 hover:bg- text-white px-3 py-1 text-sm md:text-base font-semibold md:px-5 md:py-2 duration-500 rounded-full">
                 Login
               </button>
             </Link>
 
-            {/* Menue icon for mobile small devices */}
+            {/* Menue icon for small devices */}
             {isMenuOpen ? (
               <IoMdClose
                 onClick={onToggleMenu}
-                className="text-xl md:text-2xl cursor-pointer lg:hidden"
+                className="text-xl text-slate-300 md:text-2xl cursor-pointer lg:hidden"
               />
             ) : (
               <FiMenu
                 onClick={onToggleMenu}
-                className="text-xl md:text-2xl cursor-pointer lg:hidden"
+                className="text-xl text-slate-300 md:text-2xl cursor-pointer lg:hidden"
               />
             )}
           </div>

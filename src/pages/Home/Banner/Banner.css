@@ -1,0 +1,5 @@
+/* Override styles to make organic arrow visible on all devices */
+.awss .awss__control .awss__prev,
+.awss .awss__control .awss__next {
+  display: block !important;
+}
