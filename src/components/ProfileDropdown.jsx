@@ -41,7 +41,7 @@ const ProfileDropdown = () => {
   };
 
   return (
-    <div className="relative  inline-block">
+    <div className="relative inline-block z-10">
       <div
         onMouseEnter={toggleDropdown}
         onMouseLeave={toggleDropdown}
