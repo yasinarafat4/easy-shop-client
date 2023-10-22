@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="md:flex">
-        <div className="w-full md:w-1/2 py-14 lg:ps-32 bg-indigo-800 dark:bg-slate-700 text-white text-center">
+        <div className="w-full md:w-1/2 py-14 lg:ps-32 bg-indigo-800 dark:bg-slate-600 text-white text-center">
           <h2 className="text-2xl lg:text-3xl mb-4">CONTACT US</h2>
           <div className="space-y-1">
             <p>123 ABS Street, Uni 21, Bangladesh</p>
@@ -16,7 +16,7 @@ const Footer = () => {
             <p>Sat - Sun: 10:00 - 23:00</p>
           </div>
         </div>
-        <div className=" bg-indigo-900 dark:bg-slate-800 text-white w-full md:w-1/2 text-center py-14 lg:pe-44 space-y-2">
+        <div className=" bg-indigo-900 dark:bg-slate-700 text-white w-full md:w-1/2 text-center py-14 lg:pe-44 space-y-2">
           <h2 className="text-2xl lg:text-3xl">Follow US</h2>
           <p>Join us on social media</p>
           <div className="flex justify-center items-center gap-2">

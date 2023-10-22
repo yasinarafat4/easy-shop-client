@@ -6,15 +6,14 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   // States
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [theme, setTheme] = useState("light");
-  const [isNavbarVisible, setNavbarVisible] = useState(true);
+  const [navbarVisible, setNavbarVisible] = useState(true);
 
   // Menu toggle functionality
   const onToggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen ? "Closed" : "Opened");
+    setMenuOpen(!menuOpen);
   };
 
   // Dark Or Light Mood effect
@@ -51,21 +50,24 @@ const Navbar = () => {
       {/* Navbar container */}
       <div
         className={`lg:fixed lg:w-full lg:transition-transform duration-300 z-10 ${
-          isNavbarVisible ? "lg:translate-y-0" : "lg:translate-y-0"
+          navbarVisible ? "lg:translate-y-0" : "lg:translate-y-0"
         }`}
       >
         <div className="flex justify-between items-center px-3 py-2 md:px-8 md:py-4 bg-indigo-800 dark:bg-slate-800">
           <Link to="/">
-            <h1 className="text-3xl font-bold text-white">Easy <span className="text-orange-500">Shop</span></h1>
+            <h1 className="text-3xl font-bold text-white">
+              Easy <span className="text-orange-500">Shop</span>
+            </h1>
           </Link>
           <div
             className={`absolute lg:static bg-indigo-800 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent dark:text-white min-h-[60vh] lg:min-h-fit left-0 ${
-              isMenuOpen ? "top-[12%] md:top-[16%]" : "top-[-100%]"
+              menuOpen ? "top-[12%] md:top-[16%]" : "top-[-100%]"
             } w-full lg:w-auto flex items-center py-4 px-5 duration-700 z-10`}
           >
             <div className="flex lg:flex-row flex-col lg:items-center gap-[3vw] lg:gap-[2vw] xl:gap-[3vw] text-lg">
               <NavLink
                 to="/"
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
@@ -76,26 +78,29 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/productOverview"
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
-                Product Overview
+                  Product Overview
                 </p>
               </NavLink>
               <NavLink
                 to="/addToCart"
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="hover:text- font-medium hover:duration-500">
-                Add to Cart
+                  Add to Cart
                 </p>
               </NavLink>
               <NavLink
                 to="/contact"
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
@@ -106,6 +111,7 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/about"
+                onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
@@ -145,7 +151,7 @@ const Navbar = () => {
             </Link>
 
             {/* Menue icon for small devices */}
-            {isMenuOpen ? (
+            {menuOpen ? (
               <IoMdClose
                 onClick={onToggleMenu}
                 className="text-xl text-slate-300 md:text-2xl cursor-pointer lg:hidden"
