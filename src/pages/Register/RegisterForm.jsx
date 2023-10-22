@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "../../components/GoogleLogin";
+import useAuth from "../../hooks/useAuth";
+
+const imageToken = import.meta.env.VITE_IMAGE_TOKEN;
 
 const RegisterForm = () => {
   // States
@@ -12,16 +16,52 @@ const RegisterForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  // Register functionality
+  const { createUser, updateUserProfile } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  // Register handler
+  const imageUrl = `https://api.imgbb.com/1/upload?key=${imageToken}`;
+  const handleRegister = (data) => {
+    const formData = new FormData();
+    formData.append("image", data.image[0]);
+
+    fetch(imageUrl, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Image upload failed");
+        }
+        return response.json();
+      })
+      .then((dataImage) => {
+        createUser(data.email, data.password)
+          .then((result) => {
+            console.log(result.user);
+            updateUserProfile(data.name, dataImage.data.display_url)
+              .then(() => {
+                reset();
+                toast.success("Successfully Sign Up");
+                navigate(from, { replace: true });
+              })
+              .catch((error) => setError(error.message));
+          })
+          .catch((error) => setError(error.message));
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleRegister)}
       className="flex flex-col gap-5 w-full"
     >
       {/* Name field */}

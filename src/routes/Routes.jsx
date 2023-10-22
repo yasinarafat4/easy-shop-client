@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import ProductOverview from "../pages/ProductOverview/ProductOverview";
 import Register from "../pages/Register/Register";
+import UserProfile from "../pages/UserProfile/UserProfile";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/userProfile",
+        element: <UserProfile />,
       },
       // Authentication Routes
       {

@@ -3,6 +3,8 @@ import { BsMoonStars, BsSun } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
+import ProfileDropdown from "../../../components/ProfileDropdown";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
   // States
@@ -10,6 +12,8 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [theme, setTheme] = useState("light");
   const [navbarVisible, setNavbarVisible] = useState(true);
+
+  const {user} = useAuth();
 
   // Menu toggle functionality
   const onToggleMenu = () => {
@@ -143,12 +147,16 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Login button */}
-            <Link to="/login">
-              <button className="bg-orange-500 hover:bg- text-white px-3 py-1 text-sm md:text-base font-semibold md:px-5 md:py-2 duration-500 rounded-full">
-                Login
-              </button>
-            </Link>
+            {/* conditional rendering for navbar view */}
+            {user ? (
+              <ProfileDropdown />
+            ) : (
+              <Link to="/login">
+                <button className="bg-orange-500 hover:bg- text-white px-3 py-1 text-sm md:text-base font-semibold md:px-5 md:py-2 duration-500 rounded-full">
+                  Login
+                </button>
+              </Link>
+            )}
 
             {/* Menue icon for small devices */}
             {menuOpen ? (

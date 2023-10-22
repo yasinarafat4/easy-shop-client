@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogin from "../../components/GoogleLogin";
+import useAuth from "../../hooks/useAuth";
 
 const LoginForm = () => {
   // States
   const [togglePasswordVisible, setTogglePasswordVisible] = useState(false);
+  const [error, setError] = useState("");
 
   // Hook form functionality
   const {
@@ -15,13 +18,34 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  // login functionality
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  // login handler
+  const handleLogin = (data) => {
+    signIn(data.email, data.password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Successfully loggedin");
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        if (error.code === "auth/user-not-found") {
+          setError("User Not Found. Invalid email or password!");
+        } else if (error.code === "auth/invalid-login-credentials") {
+          setError("Wrong Password. Please try again!");
+        } else {
+          setError(error.message);
+        }
+      });
   };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleLogin)}
       className="flex flex-col gap-5 w-full"
     >
       {/* Email field */}
@@ -62,7 +86,6 @@ const LoginForm = () => {
             required: true,
           })}
         />
-
         <div
           onClick={() => setTogglePasswordVisible(!togglePasswordVisible)}
           className="absolute cursor-pointer right-1 bottom-2"
@@ -73,13 +96,13 @@ const LoginForm = () => {
             <AiFillEyeInvisible className="text-xl text-gray-600" />
           )}
         </div>
-
         {errors.password && (
           <span className="text-red-500 text-base mt-1">
             Please enter correct password!
           </span>
         )}
       </div>
+      <p className="text-red-500">{error}</p>
       {/* Login button */}
       <div className="flex items-center justify-center">
         <button
