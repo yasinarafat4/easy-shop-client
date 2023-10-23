@@ -5,7 +5,6 @@ import AddToCart from "../pages/AddToCart/AddToCart";
 import ContactUs from "../pages/ContactUs/ContactUs";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
-import ProductOverview from "../pages/ProductOverview/ProductOverview";
 import Register from "../pages/Register/Register";
 import UserProfile from "../pages/UserProfile/UserProfile";
 
@@ -17,10 +16,6 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/productOverview",
-        element: <ProductOverview />,
       },
       {
         path: "/addToCart",

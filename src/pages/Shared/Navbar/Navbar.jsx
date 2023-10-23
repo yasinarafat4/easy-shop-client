@@ -81,17 +81,6 @@ const Navbar = () => {
                 </p>
               </NavLink>
               <NavLink
-                to="/productOverview"
-                onClick={() => setMenuOpen(!menuOpen)}
-                className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
-                }
-              >
-                <p className="hover:text- font-medium hover:duration-500">
-                  Product Overview
-                </p>
-              </NavLink>
-              <NavLink
                 to="/addToCart"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>

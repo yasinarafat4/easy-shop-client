@@ -9,25 +9,26 @@ const UserProfile = () => {
       <div className="flex justify-center">
         <img
           src={
-            user.photoURL ||
-            "https://i.ibb.co/0QZCv5C/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
+            user
+              ? user?.photoURL
+              : "https://i.ibb.co/0QZCv5C/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png"
           }
           className="w-24 h-24 lg:w-40 lg:h-40  rounded-full"
         />
       </div>
       <div className="mt-6 text-center">
         <h2 className="text-2xl font-semibold">
-          {user.displayName || "No user found"}
+          {user ? user?.displayName : "No user found"}
         </h2>
         <p className="text-gray-500 dark:text-gray-300 text-base">
-          {user.email || "No email found"}
+          {user ? user?.email : "No email found"}
         </p>
       </div>
       <div className="mt-6">
         <p className="text-gray-600 dark:text-white">Last Sign-In:</p>
         <p className="text-gray-800 dark:text-gray-300">
           {new Date(
-            user.metadata.lastSignInTime || "No time found"
+            user ? user?.metadata?.lastSignInTime : "No time found"
           ).toLocaleString()}
         </p>
       </div>
