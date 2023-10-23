@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { Tab, TabList, Tabs } from "react-tabs";
 import ProductsCard from "../../../components/ProductsCard";
 import SectionTitle from "../../../components/SectionTitle";
-// import { Tab, TabList, Tabs } from "react-tabs";
+import "./AllProducts.css";
 
 const AllProducts = () => {
   // States
   const [categories, setCategories] = useState([]);
-  //   const [tab, setTab] = useState("");
+  const [tab, setTab] = useState("Mobiles");
 
   //  Using the 'useEffect' hook to perform side effects in the component
   useEffect(() => {
-    fetch(`/public/products.json`)
+    fetch(`http://localhost:5000/products/${tab}`)
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
       });
-  }, []);
+  }, [tab]);
   console.log(categories);
 
   return (
@@ -26,22 +27,28 @@ const AllProducts = () => {
         subHeading={"Find Products Across a Spectrum of Categories"}
       />
 
-      {/* Tab container
+      {/* Tab container */}
       <div className="text-center font-medium m-4">
         <Tabs>
-          <TabList className="custom-tab-list">
-            <Tab className="custom-tab" onClick={() => setTab("Sports Car")}>
-              Sports Car
+          <TabList className="md:flex justify-start items-center list-none m-0 px-20 md:px-0 gap-4  dark:text-gray-300">
+            <Tab className="custom-tab" onClick={() => setTab("Mobiles")}>
+              Mobiles
             </Tab>
-            <Tab className="custom-tab" onClick={() => setTab("Regular Car")}>
-              Regular Car
+            <Tab className="custom-tab" onClick={() => setTab("Clothes")}>
+              Clothes
             </Tab>
-            <Tab className="custom-tab" onClick={() => setTab("Truck")}>
-              Truck
+            <Tab className="custom-tab" onClick={() => setTab("Furniture")}>
+              Furniture
+            </Tab>
+            <Tab className="custom-tab" onClick={() => setTab("Books")}>
+              Books
+            </Tab>
+            <Tab className="custom-tab" onClick={() => setTab("Electronics")}>
+              Electronics
             </Tab>
           </TabList>
         </Tabs>
-      </div> */}
+      </div>
 
       <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3">
         {/* Implement map */}
