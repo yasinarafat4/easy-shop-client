@@ -1,8 +1,33 @@
-# React + Vite
+# Easy Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Easy Shop is a modern e-commerce website built with React, offering a seamless shopping experience to users. This platform allows users to explore and purchase products based on their preferences.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Using react router dom and server site for fetching data
+- Responsive navbar and Footer
+- Firebase authentication with Google, email & password.
+- Logout functionality.
+- Homepage where the user can view all the products based on different categories.
+- Product overview page.
+- Add to cart page
+- 404 and LoadingSpinner page.
+
+## Live Link
+
+<!-- TODO: Website Live Link Here -->
+
+- Hosted in firebase -> [Easy Shop](https://easy-shop-387f9.web.app/)
+- Testing Email -> easyshop@gmail.com
+- Password -> EasyShop@1111
+
+## Resources & Credits
+
+- Image -> [FreePik](https://www.freepik.com/) & [Pixbay](https://pixabay.com/)
+- Banner -> [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
+- Image URL -> [Imgbb](https://imgbb.com/)
+- Dynamic Page Title -> [React Helmet Async](https://www.npmjs.com/package/react-helmet-async?activeTab=versions)
+- Alert -> [Sweet Alert 2](https://sweetalert2.github.io/) & [React Toastify](https://www.npmjs.com/package/react-toastify)
+- Form -> [Reack Hook Form](https://react-hook-form.com/)
+- Icons -> [React Icons](https://react-icons.github.io/react-icons/)
+- React Query -> [TanStack Query](https://tanstack.com/query/latest)
