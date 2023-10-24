@@ -1,0 +1,5 @@
+.featured-item {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url("https://i.ibb.co/cx1hYrH/discount-shopping.jpg");
+  background-repeat: no-repeat;
+}

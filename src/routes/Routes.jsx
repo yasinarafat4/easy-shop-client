@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import AboutUs from "../pages/AboutUs/AboutUs";
-import AddToCart from "../pages/AddToCart/AddToCart";
-import ContactUs from "../pages/ContactUs/ContactUs";
+import AllProducts from "../pages/AllProducts/AllProducts";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import MyCart from "../pages/MyCart/MyCart";
 import ProductOverview from "../pages/ProductOverview/ProductOverview";
 import Register from "../pages/Register/Register";
 import UserProfile from "../pages/UserProfile/UserProfile";
@@ -19,12 +19,12 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/addToCart",
-        element: <AddToCart />,
+        path: "/myCart",
+        element: <MyCart />,
       },
       {
-        path: "/contact",
-        element: <ContactUs />,
+        path: "/allProducts",
+        element: <AllProducts />,
       },
       {
         path: "/about",

@@ -1,12 +1,14 @@
 import React from "react";
-import AllProducts from "./AllProducts/AllProducts";
+import AllProductsByCategory from "./AllProductsByCategory/AllProductsByCategory";
 import Banner from "./Banner/Banner";
+import Featured from "./Featured/Featured";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <AllProducts />
+      <AllProductsByCategory />
+      <Featured />
     </div>
   );
 };

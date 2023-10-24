@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Tab, TabList, Tabs } from "react-tabs";
 import ProductsCard from "../../../components/ProductsCard";
 import SectionTitle from "../../../components/SectionTitle";
-import "./AllProducts.css";
+import "./AllProductsByCategory.css";
 
-const AllProducts = () => {
+const AllProductsByCategory = () => {
   // States
   const [categories, setCategories] = useState([]);
   const [tab, setTab] = useState("Mobiles");
@@ -62,4 +62,4 @@ const AllProducts = () => {
   );
 };
 
-export default AllProducts;
+export default AllProductsByCategory;

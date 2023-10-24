@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsMoonStars, BsSun } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -13,7 +14,7 @@ const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const [navbarVisible, setNavbarVisible] = useState(true);
 
-  const {user} = useAuth();
+  const { user } = useAuth();
 
   // Menu toggle functionality
   const onToggleMenu = () => {
@@ -53,7 +54,7 @@ const Navbar = () => {
     <>
       {/* Navbar container */}
       <div
-        className={`lg:fixed lg:w-full lg:transition-transform duration-300 z-10 ${
+        className={`lg:fixed lg:w-full lg:transition-transform duration-300 z-50 ${
           navbarVisible ? "lg:translate-y-0" : "lg:translate-y-0"
         }`}
       >
@@ -76,31 +77,16 @@ const Navbar = () => {
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
-                <p className="hover:text- font-medium hover:duration-500">
-                  Home
-                </p>
+                <p className="font-medium hover:duration-500">Home</p>
               </NavLink>
               <NavLink
-                to="/addToCart"
+                to="/allProducts"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
-                <p className="hover:text- font-medium hover:duration-500">
-                  Add to Cart
-                </p>
-              </NavLink>
-              <NavLink
-                to="/contact"
-                onClick={() => setMenuOpen(!menuOpen)}
-                className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
-                }
-              >
-                <p className="hover:text- font-medium hover:duration-500">
-                  Contact Us
-                </p>
+                <p className="font-medium hover:duration-500">AllProducts</p>
               </NavLink>
               <NavLink
                 to="/about"
@@ -109,10 +95,15 @@ const Navbar = () => {
                   isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
                 }
               >
-                <p className="hover:text- font-medium hover:duration-500">
-                  About Us
-                </p>
+                <p className="font-medium hover:duration-500">About Us</p>
               </NavLink>
+              {user && (
+                <Link title="My Cart" to="/myCart">
+                  <p className="text-xl text-white dark:text-white hover:duration-500">
+                    <AiOutlineShoppingCart />
+                  </p>
+                </Link>
+              )}
             </div>
           </div>
 
