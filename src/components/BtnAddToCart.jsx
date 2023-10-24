@@ -4,15 +4,34 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 
-const BtnAddToCart = () => {
+const BtnAddToCart = ({ id, image, name, price }) => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleAddToCart = (item) => {
-    console.log(item);
+  const handleAddToCart = (product) => {
+    console.log("products", product);
     if (user && user.email) {
-      toast.success("Item added")
+      const cartItem = {
+        productId: id,
+        price,
+        name,
+        image,
+        email: user.email,
+      };
+      fetch("http://localhost:5000/carts", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(cartItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            toast.success("Item added");
+          }
+        });
     } else {
       Swal.fire({
         title: "Please login",

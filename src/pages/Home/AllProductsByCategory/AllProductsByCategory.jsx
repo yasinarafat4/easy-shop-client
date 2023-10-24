@@ -52,9 +52,9 @@ const AllProductsByCategory = () => {
 
       <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3">
         {/* Implement map */}
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <>
-            <ProductsCard key={category._id} category={category} />
+            <ProductsCard key={category?._id} category={category} />
           </>
         ))}
       </div>

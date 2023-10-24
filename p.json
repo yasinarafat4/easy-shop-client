@@ -1,46 +1,233 @@
 [
   {
-    "name": "Sony Noise-Canceling Headphones",
-    "image": "https://i.ibb.co/3BL187k/popular-sony-noise-canceling-headphones.jpg",
-    "price": "$249.99",
+    "category": "Mobiles",
+    "name": "iPhone 13 Pro",
+    "image": "https://i.ibb.co/gg4zKP2/iphone-13-pro.jpg",
+    "price": 999.99,
     "ratings": "4.5",
     "features": [
-      "Industry-leading noise cancellation",
-      "High-resolution audio",
-      "Wireless and long-lasting battery life"
-    ]
+      "A15 Bionic chip",
+      "Pro camera system",
+      "Super Retina XDR display"
+    ],
+    "details": "The iPhone 13 Pro is the latest flagship smartphone from Apple, featuring a powerful A15 Bionic chip, a ProMotion display for smooth scrolling, and a versatile triple-lens camera system."
   },
   {
-    "name": "IKEA MALM Dresser",
-    "image": "https://i.ibb.co/VDg5LHL/popular-IKEA-MALM-Dresser.jpg",
-    "price": "$149.99",
+    "category": "Books",
+    "name": "The Great Gatsby",
+    "image": "https://i.ibb.co/g4Dw3b7/The-Great-Gatsby.jpg",
+    "price": 12.99,
     "ratings": "4.5",
     "features": [
-      "Sleek Scandinavian design",
-      "Ample storage space",
-      "Available in various finishes"
-    ]
+      "Classic American literature",
+      "Jazz Age setting",
+      "Exploration of the American Dream"
+    ],
+    "details": "F. Scott Fitzgerald's masterpiece explores themes of decadence, idealism, and excess."
   },
   {
-    "name": "Nike Air Max 90",
-    "image": "https://i.ibb.co/B4LTVc5/popular-Nike-Air-Max-90.jpg",
-    "price": "$119.99",
-    "ratings": "4.7",
+    "category": "Furniture",
+    "name": "Eames Lounge Chair",
+    "image": "https://i.ibb.co/7G0rh7P/Eames-Lounge-Chair.png",
+    "price": 899.99,
+    "ratings": "4.5",
     "features": [
-      "Iconic Air Max design",
-      "Visible Air unit in the sole",
-      "Leather and mesh upper"
-    ]
+      "Iconic mid-century modern design",
+      "Premium leather upholstery",
+      "Rosewood veneer shell"
+    ],
+    "details": "The Eames Lounge Chair is an iconic piece of mid-century modern furniture known for its timeless design, premium leather upholstery, and comfortable rosewood veneer shell."
   },
   {
+    "category": "Clothes",
+    "name": "Classic Denim Jeans",
+    "image": "https://i.ibb.co/tL7gHx5/Men-s-Classic-Denim-Jeans.jpg",
+    "price": 49.99,
+    "ratings": "4.5",
+    "features": [
+      "Classic straight leg fit",
+      "100% cotton denim",
+      "Button fly closure"
+    ],
+    "details": "A timeless addition to your wardrobe, these classic denim jeans offer both style and comfort."
+  },
+  {
+    "category": "Electronics",
     "name": "Samsung QLED TV",
-    "image": "https://i.ibb.co/zhbjcj6/popular-Samsung-4-K-QLED-TV.jpg",
-    "price": "$799.99",
+    "image": "https://i.ibb.co/KV36mBz/Samsung-4-K-QLED-TV.jpg",
+    "price": 799.99,
     "ratings": "4.5",
     "features": [
       "4K UHD resolution",
       "Quantum Dot technology",
       "Smart TV functionality"
-    ]
+    ],
+    "details": "Experience stunning visuals and smart features with the Samsung 4K QLED TV."
+  },
+  {
+    "category": "Mobiles",
+    "name": "Google Pixel 6 Pro",
+    "image": "https://i.ibb.co/LP1H19X/Google-Pixel-6-Pro.jpg",
+    "price": 799.99,
+    "ratings": "4.5",
+    "features": [
+      "Google's flagship smartphone",
+      "High-quality camera",
+      "Large OLED display"
+    ],
+    "details": "The Google Pixel 6 Pro is Google's flagship smartphone, known for its stunning OLED display, advanced camera system, and the stock Android experience."
+  },
+  {
+    "category": "Furniture",
+    "name": "IKEA MALM Dresser",
+    "image": "https://i.ibb.co/dtmp4hL/IKEA-MALM-Dresser.png",
+    "price": 149.99,
+    "ratings": "4.5",
+    "features": [
+      "Sleek Scandinavian design",
+      "Ample storage space",
+      "Available in various finishes"
+    ],
+    "details": "The MALM Dresser from IKEA combines style and functionality in your bedroom."
+  },
+  {
+    "category": "Clothes",
+    "name": "Women's Leather Jacket",
+    "image": "https://i.ibb.co/BwLvFdp/Women-s-Leather-Jacket.jpg",
+    "price": 199.99,
+    "ratings": "4.5",
+    "features": ["Genuine leather", "Asymmetrical zipper", "Multiple pockets"],
+    "details": "This leather jacket is a stylish addition to your wardrobe, offering a bold and edgy look."
+  },
+  {
+    "category": "Electronics",
+    "name": "Sony Noise-Canceling Headphones",
+    "image": "https://i.ibb.co/LvPVRrK/Sony-Noise-Canceling-Headphones.jpg",
+    "price": 249.99,
+    "ratings": "4.5",
+    "features": [
+      "Industry-leading noise cancellation",
+      "High-resolution audio",
+      "Wireless and long-lasting battery life"
+    ],
+    "details": "Enjoy an immersive audio experience with these Sony Noise-Canceling Headphones."
+  },
+  {
+    "category": "Mobiles",
+    "name": "OnePlus 9 Pro",
+    "image": "https://i.ibb.co/Gnmp1wK/One-Plus-9-Pro.png",
+    "price": 699.99,
+    "ratings": "4.5",
+    "features": [
+      "Flagship performance",
+      "Hasselblad camera system",
+      "Fluid AMOLED display"
+    ],
+    "details": "The OnePlus 9 Pro delivers high-end performance and photography capabilities."
+  },
+  {
+    "category": "Books",
+    "name": "To Kill a Mockingbird",
+    "image": "https://i.ibb.co/6H0BMwM/To-Kill-a-Mockingbird.jpg",
+    "price": 12.99,
+    "ratings": "4.9",
+    "features": [
+      "Classic novel by Harper Lee",
+      "Pulitzer Prize winner",
+      "Coming-of-age story"
+    ],
+    "details": "Harper Lee's classic novel 'To Kill a Mockingbird' is a Pulitzer Prize-winning masterpiece that tells a powerful coming-of-age story while addressing themes of racial injustice and moral growth in the American South."
+  },
+  {
+    "category": "Clothes",
+    "name": "Levi's 501 Jeans",
+    "image": "https://i.ibb.co/DfmNmRS/Levi-s-501-Jeans.jpg",
+    "price": 49.99,
+    "ratings": "4.5",
+    "features": [
+      "Classic straight leg fit",
+      "100% cotton denim",
+      "Button fly closure"
+    ],
+    "details": "Levi's 501 Jeans are a classic in the world of denim fashion, known for their timeless style, comfortable straight leg fit, and iconic button fly closure."
+  },
+  {
+    "category": "Electronics",
+    "name": "Canon EOS R6 Mirrorless Camera",
+    "image": "https://i.ibb.co/hBLFNcM/eosr6-2.jpg",
+    "price": 2399.99,
+    "ratings": "4.8",
+    "features": [
+      "20.1-megapixel full-frame sensor",
+      "4K UHD video recording",
+      "Dual Pixel CMOS AF II"
+    ],
+    "details": "The Canon EOS R6 is a high-performance mirrorless camera featuring a 20.1-megapixel full-frame sensor, 4K UHD video recording, in-body image stabilization, and advanced Dual Pixel CMOS AF II. It also offers seamless connectivity with built-in Wi-Fi and Bluetooth."
+  },
+
+  {
+    "category": "Furniture",
+    "name": "Herman Miller Aeron Chair",
+    "image": "https://i.ibb.co/x8k6YgJ/Herman-Miller-Aeron-Chair.jpg",
+    "price": 1449.99,
+    "ratings": "4.9",
+    "features": [
+      "Ergonomic design",
+      "Mesh back for breathability",
+      "Adjustable lumbar support"
+    ],
+    "details": "The Herman Miller Aeron Chair is an ergonomic masterpiece, featuring a mesh back for breathability, adjustable lumbar support, and a highly customizable design for a comfortable and productive workspace."
+  },
+  {
+    "category": "Clothes",
+    "name": "Nike Air Max 90",
+    "image": "https://i.ibb.co/N9gRYws/Nike-Air-Max-90.jpg",
+    "price": 119.99,
+    "ratings": "4.7",
+    "features": [
+      "Iconic Air Max design",
+      "Visible Air unit in the sole",
+      "Leather and mesh upper"
+    ],
+    "details": "The Nike Air Max 90 is a classic sneaker with an iconic design, featuring a visible Air unit in the sole, a comfortable leather and mesh upper, and versatile style for everyday wear."
+  },
+  {
+    "category": "Electronics",
+    "name": "Apple MacBook Pro",
+    "image": "https://i.ibb.co/DLs4XQ3/Apple-Mac-Book-Pro-16.jpg",
+    "price": 2399.99,
+    "ratings": "4.9",
+    "features": [
+      "16-inch Retina display",
+      "M1 Pro or Max chip",
+      "Magic Keyboard"
+    ],
+    "details": "The Apple MacBook Pro 16 is a powerhouse laptop with a stunning 16-inch Retina display, the latest M1 Pro or Max chip, a comfortable Magic Keyboard, and all-day battery life for professionals and creatives."
+  },
+  {
+    "category": "Mobiles",
+    "name": "Samsung Galaxy S22",
+    "image": "https://i.ibb.co/BK2TVmY/samsung-galaxy-s22.jpg",
+    "price": 1299.99,
+    "ratings": "4.8",
+    "features": [
+      "6.8-inch Dynamic AMOLED display",
+      "Quad-camera system with 108MP sensor",
+      "5G connectivity"
+    ],
+    "details": "The Samsung Galaxy S22 Ultra is a top-tier smartphone with a 6.8-inch Dynamic AMOLED display, a versatile quad-camera system, S Pen support, and powerful 5G connectivity for a premium mobile experience."
+  },
+  {
+    "category": "Books",
+    "name": "The DA Vinci Code",
+    "image": "https://i.ibb.co/tYkyKy5/The-DA-Vinci-Code.jpg",
+    "price": 10.99,
+    "ratings": "4.6",
+    "features": [
+      "Classic coming-of-age novel",
+      "Holden Caulfield's narrative",
+      "Exploration of teenage rebellion"
+    ],
+    "details": "Dan Drown's 'The Catcher in the Rye' is a classic coming-of-age novel that follows the narrative of Holden Caulfield and explores the theme of teenage rebellion."
   }
 ]

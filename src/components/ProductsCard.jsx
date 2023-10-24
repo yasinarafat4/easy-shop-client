@@ -7,7 +7,6 @@ import BtnAddToCart from "./BtnAddToCart";
 const ProductsCard = ({ category }) => {
   const { _id, image, name, price, ratings } = category;
 
-
   return (
     <div className="m-4 border p-4 grid grid-cols-2 justify-center items-center gap-4 dark:text-white rounded-md">
       <Link to={`/productOverview/${_id}`}>
@@ -34,7 +33,7 @@ const ProductsCard = ({ category }) => {
           <span className="font-semibold  dark:text-white text-slate-600">
             Price:
           </span>{" "}
-          {price}
+          ${price}
         </p>
         <div className="flex-grow-1">
           <Rating
@@ -50,7 +49,7 @@ const ProductsCard = ({ category }) => {
           />
         </div>
         {/* Add to cart button */}
-        <BtnAddToCart />
+        <BtnAddToCart id={_id} image={image} name={name} price={price} />
       </div>
     </div>
   );

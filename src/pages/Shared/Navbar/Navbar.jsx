@@ -98,10 +98,11 @@ const Navbar = () => {
                 <p className="font-medium hover:duration-500">About Us</p>
               </NavLink>
               {user && (
-                <Link title="My Cart" to="/myCart">
-                  <p className="text-xl text-white dark:text-white hover:duration-500">
-                    <AiOutlineShoppingCart />
-                  </p>
+                <Link title="My Cart" to="/myCart" className="relative">
+                  <AiOutlineShoppingCart className="text-2xl text-white dark:text-white hover:duration-500" />
+                  <div className="bg-red-500 text-white w-5 h-5 rounded-full flex items-center justify-center absolute -top-2 right-14 lg:-top-2 lg:-right-2">
+                    0
+                  </div>
                 </Link>
               )}
             </div>
