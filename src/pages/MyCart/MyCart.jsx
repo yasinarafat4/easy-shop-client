@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import PageTitle from "../../components/PageTitle";
 import useCart from "../../hooks/useCart";
@@ -11,7 +10,7 @@ const MyCart = () => {
   // using array reduce to sum
   const total = cart.reduce((sum, item) => item.price + sum, 0).toFixed(2);
 
-  // Delete functionality
+  // Delete handling functionality
   const handleDelete = (item) => {
     Swal.fire({
       title: "Are you sure?",
@@ -37,6 +36,15 @@ const MyCart = () => {
     });
   };
 
+  // Payment handler
+  const handlePayment = () => {
+    Swal.fire(
+      "Payment Integration",
+      "I regret to inform you that due to time limitations, I am unable to implement this feature at the moment. I appreciate your understanding and patience. Rest assured, if I have the opportunity, I will work on implementing it in the future.",
+      "question"
+    );
+  };
+
   return (
     <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">
       {/* Title */}
@@ -50,11 +58,10 @@ const MyCart = () => {
           </h2>
           <h2 className="text-xs md:text-xl">Total Price: {total || 0}</h2>
         </div>
-        <Link>
-          <button className="px-3 md:px-4 py-1 md:py-2 bg-indigo-600 text-white border-none rounded-sm md:rounded-md">
-            Pay
-          </button>
-        </Link>
+
+        <button onClick={handlePayment} className="px-3 md:px-4 py-1 md:py-2 bg-indigo-600 text-white border-none rounded-sm md:rounded-md">
+          Pay
+        </button>
       </div>
 
       {/* Selected products table */}
