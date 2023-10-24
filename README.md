@@ -23,7 +23,7 @@ Easy Shop is a modern e-commerce website built with React, offering a seamless s
 
 ## Resources & Credits
 
-- Image -> [FreePik](https://www.freepik.com/) & [Pixbay](https://pixabay.com/)
+- Image -> [FreePik](https://www.freepik.com/)
 - Banner -> [React Responsive Carousel](https://www.npmjs.com/package/react-responsive-carousel)
 - Image URL -> [Imgbb](https://imgbb.com/)
 - Dynamic Page Title -> [React Helmet Async](https://www.npmjs.com/package/react-helmet-async?activeTab=versions)

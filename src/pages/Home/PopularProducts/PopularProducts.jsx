@@ -14,7 +14,6 @@ const PopularProducts = () => {
         setPopularProducts(data);
       });
   }, []);
-  console.log(popularProducts);
 
   return (
     <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">

@@ -4,7 +4,7 @@ import BtnAddToCart from "../../components/BtnAddToCart";
 
 const ProductOverview = () => {
   const productOverview = useLoaderData();
-  console.log(productOverview);
+
   const { _id, name, image, price, features, details } = productOverview;
   return (
     <div className="bg-white dark:bg-slate-800 dark:text-white p-6 shadow-lg rounded-lg">

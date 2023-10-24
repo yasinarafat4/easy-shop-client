@@ -5,7 +5,6 @@ import useCart from "../../hooks/useCart";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
-  console.log(cart);
 
   // using array reduce to sum
   const total = cart.reduce((sum, item) => item.price + sum, 0).toFixed(2);
@@ -59,7 +58,10 @@ const MyCart = () => {
           <h2 className="text-xs md:text-xl">Total Price: {total || 0}</h2>
         </div>
 
-        <button onClick={handlePayment} className="px-3 md:px-4 py-1 md:py-2 bg-indigo-600 text-white border-none rounded-sm md:rounded-md">
+        <button
+          onClick={handlePayment}
+          className="px-3 md:px-4 py-1 md:py-2 bg-indigo-600 text-white border-none rounded-sm md:rounded-md"
+        >
           Pay
         </button>
       </div>
