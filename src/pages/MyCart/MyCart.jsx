@@ -1,13 +1,63 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import PageTitle from "../../components/PageTitle";
 import useCart from "../../hooks/useCart";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
   console.log(cart);
+
+  // using array reduce to sum
+  const total = cart.reduce((sum, item) => item.price + sum, 0).toFixed(2);
+
+  // Delete functionality
+  const handleDelete = (item) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/carts/${item._id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              refetch();
+              Swal.fire("Deleted!", "Product has been deleted.", "success");
+            }
+          });
+      }
+    });
+  };
+
   return (
     <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">
+      {/* Title */}
       <PageTitle heading={"My Added Products"} />
+
+      {/* Calculating total price container */}
+      <div className="font-bold uppercase flex justify-evenly items-center mb-2">
+        <div className="space-y-3 md:space-y-0 md:flex gap-10">
+          <h2 className="text-xs md:text-xl">
+            Total Orders: {cart?.length || 0}
+          </h2>
+          <h2 className="text-xs md:text-xl">Total Price: {total || 0}</h2>
+        </div>
+        <Link>
+          <button className="px-3 md:px-4 py-1 md:py-2 bg-indigo-600 text-white border-none rounded-sm md:rounded-md">
+            Pay
+          </button>
+        </Link>
+      </div>
+
+      {/* Selected products table */}
       <table className="min-w-full divide-y divide-gray-200 ">
         <thead>
           <tr className="bg-slate-400 dark:bg-slate-700 text-white text-[10px] md:text-base">
@@ -56,7 +106,10 @@ const MyCart = () => {
                   {item.price}
                 </td>
                 <td className="py-3 px-4 dark:bg-slate-800 dark:text-white">
-                  <button className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-700 ml-2">
+                  <button
+                    onClick={() => handleDelete(item)}
+                    className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-700 ml-2"
+                  >
                     Delete
                   </button>
                 </td>
