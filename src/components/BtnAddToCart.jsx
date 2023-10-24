@@ -21,7 +21,7 @@ const BtnAddToCart = ({ id, image, name, price }) => {
         image,
         email: user.email,
       };
-      fetch("http://localhost:5000/carts", {
+      fetch("https://easy-shop-server-five.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",

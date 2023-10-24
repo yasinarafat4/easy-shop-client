@@ -11,7 +11,7 @@ const AllProducts = () => {
 
   //  Using the 'useEffect' hook to perform side effects
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://easy-shop-server-five.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

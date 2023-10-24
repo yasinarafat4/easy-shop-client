@@ -8,7 +8,7 @@ const PopularProducts = () => {
 
   //   Handling sideeffect for all popular data
   useEffect(() => {
-    fetch("http://localhost:5000/popular")
+    fetch("https://easy-shop-server-five.vercel.app/popular")
       .then((res) => res.json())
       .then((data) => {
         setPopularProducts(data);

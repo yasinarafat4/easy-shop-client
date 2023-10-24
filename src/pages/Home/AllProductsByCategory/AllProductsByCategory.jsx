@@ -11,7 +11,7 @@ const AllProductsByCategory = () => {
 
   //  Using the 'useEffect' hook to perform side effects in the component
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${tab}`)
+    fetch(`https://easy-shop-server-five.vercel.app/products/${tab}`)
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);

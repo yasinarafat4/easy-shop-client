@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
         element: <ProductOverview />,
         loader: async ({ params }) => {
           const response = await fetch(
-            `http://localhost:5000/products/category/${params.id}`
+            `https://easy-shop-server-five.vercel.app/products/category/${params.id}`
           );
           if (!response.ok) {
             throw new Error("Failed to fetch data");
