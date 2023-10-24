@@ -17,7 +17,6 @@ const AllProducts = () => {
         setProducts(data);
       });
   }, []);
-  console.log(products);
 
   if (loading) {
     return <LoadingSpinner />;
