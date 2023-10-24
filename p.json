@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Sony Noise-Canceling Headphones",
+    "image": "https://i.ibb.co/3BL187k/popular-sony-noise-canceling-headphones.jpg",
+    "price": "$249.99",
+    "ratings": "4.5",
+    "features": [
+      "Industry-leading noise cancellation",
+      "High-resolution audio",
+      "Wireless and long-lasting battery life"
+    ]
+  },
+  {
+    "name": "IKEA MALM Dresser",
+    "image": "https://i.ibb.co/VDg5LHL/popular-IKEA-MALM-Dresser.jpg",
+    "price": "$149.99",
+    "ratings": "4.5",
+    "features": [
+      "Sleek Scandinavian design",
+      "Ample storage space",
+      "Available in various finishes"
+    ]
+  },
+  {
+    "name": "Nike Air Max 90",
+    "image": "https://i.ibb.co/B4LTVc5/popular-Nike-Air-Max-90.jpg",
+    "price": "$119.99",
+    "ratings": "4.7",
+    "features": [
+      "Iconic Air Max design",
+      "Visible Air unit in the sole",
+      "Leather and mesh upper"
+    ]
+  },
+  {
+    "name": "Samsung QLED TV",
+    "image": "https://i.ibb.co/zhbjcj6/popular-Samsung-4-K-QLED-TV.jpg",
+    "price": "$799.99",
+    "ratings": "4.5",
+    "features": [
+      "4K UHD resolution",
+      "Quantum Dot technology",
+      "Smart TV functionality"
+    ]
+  }
+]

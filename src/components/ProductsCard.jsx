@@ -6,25 +6,7 @@ import BtnAddToCart from "./BtnAddToCart";
 
 const ProductsCard = ({ category }) => {
   const { _id, image, name, price, ratings } = category;
-  // const navigate = useNavigate();
-  // const { user } = useAuth();
 
-  // Add to Cart handler
-  // const handleAddToCart = () => {
-  //   if (user) {
-  //     navigate(`/productOverview/${_id}`);
-  //   } else {
-  //     Swal.fire({
-  //       icon: "error",
-  //       title: "Oops...",
-  //       text: "You have to log in first to view details!",
-  //       confirmButtonText: "Ok",
-  //     }).then(() => {
-  //       navigate("/login");
-  //       navigate(`/productOverview/${_id}`);
-  //     });
-  //   }
-  // };
 
   return (
     <div className="m-4 border p-4 grid grid-cols-2 justify-center items-center gap-4 dark:text-white rounded-md">
