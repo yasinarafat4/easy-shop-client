@@ -6,6 +6,7 @@ import { IoMdClose } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import ProfileDropdown from "../../../components/ProfileDropdown";
 import useAuth from "../../../hooks/useAuth";
+import useCart from "../../../hooks/useCart";
 
 const Navbar = () => {
   // States
@@ -14,7 +15,9 @@ const Navbar = () => {
   const [theme, setTheme] = useState("light");
   const [navbarVisible, setNavbarVisible] = useState(true);
 
+  // Using hooks
   const { user } = useAuth();
+  const [cart] = useCart();
 
   // Menu toggle functionality
   const onToggleMenu = () => {
@@ -101,7 +104,7 @@ const Navbar = () => {
                 <Link title="My Cart" to="/myCart" className="relative">
                   <AiOutlineShoppingCart className="text-2xl text-white dark:text-white hover:duration-500" />
                   <div className="bg-red-500 text-white w-5 h-5 rounded-full flex items-center justify-center absolute -top-2 right-14 lg:-top-2 lg:-right-2">
-                    0
+                    {cart?.length || 0}
                   </div>
                 </Link>
               )}

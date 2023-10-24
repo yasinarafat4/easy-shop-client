@@ -3,9 +3,11 @@ import toast from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
+import useCart from "../hooks/useCart";
 
 const BtnAddToCart = ({ id, image, name, price }) => {
   const { user } = useAuth();
+  const [, refetch] = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,6 +31,8 @@ const BtnAddToCart = ({ id, image, name, price }) => {
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {
+            // Using refetch to realtime update the cart and show notification
+            refetch();
             toast.success("Item added");
           }
         });
