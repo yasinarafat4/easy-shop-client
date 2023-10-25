@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import BtnAddToCart from "../../components/BtnAddToCart";
 
@@ -8,6 +9,11 @@ const ProductOverview = () => {
   const { _id, name, image, price, features, details } = productOverview;
   return (
     <div className="bg-white dark:bg-slate-800 dark:text-white p-6 shadow-lg rounded-lg">
+      {/* Dynamic page title */}
+      <Helmet>
+        <title>Easy Shop | Product Overview</title>
+      </Helmet>
+
       <h1 className="text-2xl font-semibold mb-4">{name}</h1>
       <div className="lg:flex justify-center items-center">
         <div>

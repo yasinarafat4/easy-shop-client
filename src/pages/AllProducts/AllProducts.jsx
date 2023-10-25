@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle";
 import ProductsCard from "../../components/ProductsCard";
-
 
 const AllProducts = () => {
   // States
@@ -18,6 +18,11 @@ const AllProducts = () => {
 
   return (
     <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">
+      {/* Dynamic page title */}
+      <Helmet>
+        <title>Easy Shop | All Products</title>
+      </Helmet>
+
       {/* Title */}
       <PageTitle heading={"All Products"} />
       <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3">

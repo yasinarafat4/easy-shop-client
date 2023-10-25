@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import useAuth from "../../hooks/useAuth";
 
 const UserProfile = () => {
@@ -6,6 +7,11 @@ const UserProfile = () => {
 
   return (
     <div className="bg-white dark:bg-slate-800 dark:text-white shadow-md p-6 rounded-lg">
+      {/* Dynamic page title */}
+      <Helmet>
+        <title>Easy Shop | My Profile</title>
+      </Helmet>
+
       <div className="flex justify-center">
         <img
           src={
