@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import About from "./About/About";
 import AllProductsByCategory from "./AllProductsByCategory/AllProductsByCategory";
 import Banner from "./Banner/Banner";
+import Contact from "./Contact/Contact";
 import Featured from "./Featured/Featured";
 import OurPartners from "./OurPartners/OurPartners";
 import PopularProducts from "./PopularProducts/PopularProducts";
@@ -22,6 +23,7 @@ const Home = () => {
       <PopularProducts />
       <ShortInfo />
       <About />
+      <Contact />
       <Featured />
       <OurPartners />
     </div>
