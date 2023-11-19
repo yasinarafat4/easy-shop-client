@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm";
 
 const Login = () => {
   return (
-    <div className="w-full py-4 lg:py-10 dark:bg-slate-800 dark:text-white">
+    <div className="w-full py-4 lg:py-10 dark:bg-slate-900 dark:text-white">
       {/* Dynamic page title */}
       <Helmet>
         <title>Easy Shop | Login</title>

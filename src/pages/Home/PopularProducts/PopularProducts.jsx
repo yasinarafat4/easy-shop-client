@@ -16,7 +16,7 @@ const PopularProducts = () => {
   }, []);
 
   return (
-    <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">
+    <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-900">
       {/* title */}
       <SectionTitle
         heading={"Popular Products"}

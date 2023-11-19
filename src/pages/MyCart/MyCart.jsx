@@ -46,7 +46,7 @@ const MyCart = () => {
   };
 
   return (
-    <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-800">
+    <div className="py-2 px-2 lg:py-4 lg:px-8 dark:bg-slate-900">
       {/* Dynamic page title */}
       <Helmet>
         <title>Easy Shop | My Cart</title>
@@ -88,7 +88,7 @@ const MyCart = () => {
             <tr>
               <td
                 colSpan="5"
-                className="py-10 px-4 text-red-500 text-sm md:text-lg dark:bg-slate-800 dark:text-red-500 text-center"
+                className="py-10 px-4 text-red-500 text-sm md:text-lg dark:bg-slate-900 dark:text-red-500 text-center"
               >
                 You have not selected any products yet!
               </td>
@@ -100,13 +100,13 @@ const MyCart = () => {
                 className={
                   index % 2 === 0
                     ? "bg-gray-100 text-[10px] md:text-base text-center"
-                    : "bg-white dark:bg-slate-800 dark:text-white text-[10px] md:text-base text-center"
+                    : "bg-white dark:bg-slate-900 dark:text-white text-[10px] md:text-base text-center"
                 }
               >
-                <td className="py-3 px-4 text-[10px] md:text-base text-center dark:bg-slate-800 dark:text-white">
+                <td className="py-3 px-4 text-[10px] md:text-base text-center dark:bg-slate-900 dark:text-white">
                   {index + 1}
                 </td>
-                <td className="py-3 px-4 dark:bg-slate-800 dark:text-white">
+                <td className="py-3 px-4 dark:bg-slate-900 dark:text-white">
                   {/* Item Image */}
                   <img
                     src={item.image}
@@ -114,13 +114,13 @@ const MyCart = () => {
                     className="h-12 w-12 object-cover rounded mx-auto"
                   />
                 </td>
-                <td className="py-3 px-4 dark:bg-slate-800 dark:text-white">
+                <td className="py-3 px-4 dark:bg-slate-900 dark:text-white">
                   {item.name}
                 </td>
-                <td className="py-3 px-4 dark:bg-slate-800 dark:text-white">
+                <td className="py-3 px-4 dark:bg-slate-900 dark:text-white">
                   {item.price}
                 </td>
-                <td className="py-3 px-4 dark:bg-slate-800 dark:text-white">
+                <td className="py-3 px-4 dark:bg-slate-900 dark:text-white">
                   <button
                     onClick={() => handleDelete(item)}
                     className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-700 ml-2"

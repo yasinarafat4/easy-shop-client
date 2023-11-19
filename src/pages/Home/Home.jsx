@@ -1,10 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import About from "./About/About";
 import AllProductsByCategory from "./AllProductsByCategory/AllProductsByCategory";
 import Banner from "./Banner/Banner";
 import Featured from "./Featured/Featured";
 import OurPartners from "./OurPartners/OurPartners";
 import PopularProducts from "./PopularProducts/PopularProducts";
+import ShortInfo from "./ShortInfo/ShortInfo";
 
 const Home = () => {
   return (
@@ -18,8 +20,10 @@ const Home = () => {
       <Banner />
       <AllProductsByCategory />
       <PopularProducts />
-      <OurPartners />
+      <ShortInfo />
+      <About />
       <Featured />
+      <OurPartners />
     </div>
   );
 };

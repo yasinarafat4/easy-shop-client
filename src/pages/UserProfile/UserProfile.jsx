@@ -6,7 +6,7 @@ const UserProfile = () => {
   const { user } = useAuth();
 
   return (
-    <div className="bg-white dark:bg-slate-800 dark:text-white shadow-md p-6 rounded-lg">
+    <div className="bg-white dark:bg-slate-900 dark:text-white shadow-md p-6 rounded-lg">
       {/* Dynamic page title */}
       <Helmet>
         <title>Easy Shop | My Profile</title>

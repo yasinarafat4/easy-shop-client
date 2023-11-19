@@ -68,11 +68,11 @@ const Navbar = () => {
             </h1>
           </Link>
           <div
-            className={`absolute lg:static bg-indigo-800 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent dark:text-white min-h-[60vh] lg:min-h-fit left-0 ${
+            className={`absolute lg:static bg-indigo-800 dark:bg-slate-900 lg:bg-transparent lg:dark:bg-transparent dark:text-white min-h-[60vh] lg:min-h-fit left-0 ${
               menuOpen ? "top-[11%] md:top-[15%]" : "top-[-100%]"
             } w-full lg:w-auto flex items-center py-4 px-5 duration-700 z-10`}
           >
-            <div className="flex lg:flex-row flex-col lg:items-center gap-[3vw] lg:gap-[2vw] xl:gap-[3vw] text-lg">
+            <div className="flex lg:flex-row flex-col lg:items-center  gap-[3vw] lg:gap-[2vw] xl:gap-[3vw] text-lg">
               <NavLink
                 to="/"
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -99,6 +99,15 @@ const Navbar = () => {
                 }
               >
                 <p className="font-medium hover:duration-500">About Us</p>
+              </NavLink>
+              <NavLink
+                to="/contact"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className={({ isActive }) =>
+                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
+                }
+              >
+                <p className="font-medium hover:duration-500">Contact Us</p>
               </NavLink>
               {user && (
                 <Link title="My Cart" to="/myCart" className="relative">

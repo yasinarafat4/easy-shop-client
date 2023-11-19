@@ -8,7 +8,7 @@ const ProductOverview = () => {
 
   const { _id, name, image, price, features, details } = productOverview;
   return (
-    <div className="bg-white dark:bg-slate-800 dark:text-white p-6 shadow-lg rounded-lg">
+    <div className="bg-white dark:bg-slate-900 dark:text-white p-6 shadow-lg rounded-lg">
       {/* Dynamic page title */}
       <Helmet>
         <title>Easy Shop | Product Overview</title>

@@ -52,11 +52,23 @@ const RegisterForm = () => {
                 toast.success("Successfully Sign Up");
                 navigate(from, { replace: true });
               })
-              .catch((error) => setError(error.message));
+              .catch((error) => {
+                console.error(error);
+                console.log(error);
+                setError(error.message);
+              });
           })
-          .catch((error) => setError(error.message));
+          .catch((error) => {
+            console.error(error);
+            console.log(error);
+            setError(error.message);
+          });
       })
-      .catch((error) => setError(error.message));
+      .catch((error) => {
+        console.error(error);
+        console.log(error);
+        setError(error.message);
+      });
   };
 
   return (
