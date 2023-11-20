@@ -7,6 +7,7 @@ import Contact from "./Contact/Contact";
 import Featured from "./Featured/Featured";
 import OurPartners from "./OurPartners/OurPartners";
 import PopularProducts from "./PopularProducts/PopularProducts";
+import Reviews from "./Reviews/Reviews";
 import ShortInfo from "./ShortInfo/ShortInfo";
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
       <Contact />
       <OurPartners />
       <Featured />
+      <Reviews />
     </div>
   );
 };

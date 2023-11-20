@@ -31,4 +31,5 @@ Easy Shop is a modern e-commerce website built with React, offering a seamless s
 - Form -> [Reack Hook Form](https://react-hook-form.com/)
 - Send Email -> [Email JS](https://www.emailjs.com/)
 - Icons -> [React Icons](https://react-icons.github.io/react-icons/)
+- Ratings -> [React Rating](https://www.npmjs.com/package/react-rating) & [Smastrom/React Rating](https://www.npmjs.com/package/@smastrom/react-rating)
 - React Query -> [TanStack Query](https://tanstack.com/query/latest)
