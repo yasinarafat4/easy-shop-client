@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./ContactUs.css";
 
 const ContactUs = () => {
@@ -94,6 +95,7 @@ const ContactUs = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
