@@ -77,7 +77,7 @@ const Navbar = () => {
                 to="/"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
+                  isActive ? "text-white  font-bold text-[19px]" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="font-medium hover:duration-500">Home</p>
@@ -86,7 +86,7 @@ const Navbar = () => {
                 to="/allProducts"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
+                  isActive ? "text-white  font-bold text-[19px]" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="font-medium hover:duration-500">AllProducts</p>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 to="/about"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
+                  isActive ? "text-white  font-bold text-[19px]" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="font-medium hover:duration-500">About Us</p>
@@ -104,7 +104,7 @@ const Navbar = () => {
                 to="/contact"
                 onClick={() => setMenuOpen(!menuOpen)}
                 className={({ isActive }) =>
-                  isActive ? "text-white" : "text-slate-300 dark:text-slate-300"
+                  isActive ? "text-white  font-bold text-[19px]" : "text-slate-300 dark:text-slate-300"
                 }
               >
                 <p className="font-medium hover:duration-500">Contact Us</p>
