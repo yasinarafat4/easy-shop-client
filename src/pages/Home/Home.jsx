@@ -24,8 +24,8 @@ const Home = () => {
       <ShortInfo />
       <About />
       <Contact />
-      <Featured />
       <OurPartners />
+      <Featured />
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Footer = () => {
     <footer>
       <div className="md:flex">
         <div className="w-full md:w-1/2 py-14 lg:ps-32 bg-indigo-800 dark:bg-slate-700 text-white text-center">
-          <h2 className="text-2xl lg:text-3xl mb-4">CONTACT US</h2>
+          <h2 className="text-2xl lg:text-3xl mb-4">REACH US</h2>
           <div className="space-y-1">
             <p>123 ABS Street, Uni 21, Bangladesh</p>
             <p>Mon - Fri: 08:00 - 22:00</p>

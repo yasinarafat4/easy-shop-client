@@ -26,7 +26,7 @@ const OurPartners = () => {
         speed={40}
         gradient={false}
         pauseOnHover={!isPaused}
-        className="mt-10 mb-20 cursor-pointer"
+        className="mb-6 cursor-pointer"
       >
         <img
           className="mr-12 w-[200px] object-contain h-[200px]"
